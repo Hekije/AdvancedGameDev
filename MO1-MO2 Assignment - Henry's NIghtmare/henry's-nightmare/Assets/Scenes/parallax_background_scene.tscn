@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://do8nbb6xwg5sx"]
+
+[ext_resource type="Texture2D" uid="uid://bnjvlsturcd01" path="res://Assets/Sprites/foreground.png" id="2_k4u2o"]
+
+[node name="ParallaxBackgroundScene" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+show_behind_parent = true
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(256, 0)
+repeat_times = 40
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+show_behind_parent = true
+position = Vector2(-254, -238)
+scale = Vector2(2.00391, 1.85156)
+texture = ExtResource("2_k4u2o")
+centered = false
+offset = Vector2(128, 0)

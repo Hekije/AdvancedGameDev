@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpq0ejkx5ecds"]
+
+[ext_resource type="Texture2D" uid="uid://661qv8q1bh5b" path="res://Assets/Sprites/Orb_icon.png" id="1_ugii2"]
+[ext_resource type="Script" uid="uid://dtbkwfu2r26y8" path="res://orb.gd" id="2_rtyj6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrpq1"]
+
+[node name="orb" type="Sprite2D"]
+texture = ExtResource("1_ugii2")
+script = ExtResource("2_rtyj6")
+
+[node name="interaction" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction"]
+shape = SubResource("CircleShape2D_xrpq1")
+
+[connection signal="body_entered" from="interaction" to="." method="_on_interaction_body_entered"]

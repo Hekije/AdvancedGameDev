@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://drj20fynnxq7t"]
+
+[ext_resource type="Script" uid="uid://dhqm6a7kenty5" path="res://cutscene_stills.gd" id="1_s6gkr"]
+[ext_resource type="Texture2D" uid="uid://rocrimht37r6" path="res://Assets/CUTSCENES/HN1.png" id="2_v3cfc"]
+[ext_resource type="FontFile" uid="uid://cfjciextshsi7" path="res://poco/Poco.ttf" id="3_bdlrk"]
+[ext_resource type="Texture2D" uid="uid://cc0ncvblacuyn" path="res://Assets/CUTSCENES/HN2.png" id="3_qly8q"]
+[ext_resource type="Texture2D" uid="uid://8t5oxho7isb1" path="res://Assets/CUTSCENES/HN3.png" id="4_ulu27"]
+[ext_resource type="Texture2D" uid="uid://doajgpy8ia0cg" path="res://Assets/CUTSCENES/HN4.png" id="5_kixo4"]
+[ext_resource type="Texture2D" uid="uid://c7214nkhdgpop" path="res://Assets/CUTSCENES/HN5.png" id="6_yv24v"]
+[ext_resource type="AudioStream" uid="uid://d2sxl741de4y5" path="res://MUSIC/Henrys_Nightmare_MenuMusic.mp3" id="8_ulu27"]
+
+[node name="CutsceneStills" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s6gkr")
+stills = Array[Texture2D]([ExtResource("2_v3cfc"), ExtResource("3_qly8q"), ExtResource("4_ulu27"), ExtResource("6_yv24v"), ExtResource("5_kixo4")])
+captions = Array[String](["Every night, Henry's dreams start the same...quiet, familiar, safe...but stress and exhaustion has left him to battle with his mind...", "A bright red light covers the sky..then all of a sudden the window bleeds red...and the silence starts to hum...", "His heart sprints first...He remembers...this is the part where he wakes up...or did he? ", "But not tonight...tonight, the street is waiting under a hungry moon...", "If he wants to leave the dream...he has to go deeper into his mind...if not...he might never wake up."])
+
+[node name="Image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -412.0
+offset_top = -360.0
+offset_right = 413.0
+offset_bottom = 358.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_v3cfc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 13.0
+offset_right = 77.0
+offset_bottom = 53.0
+theme_override_fonts/font = ExtResource("3_bdlrk")
+
+[node name="Hint" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1028.0
+offset_top = 683.0
+offset_right = 1442.0
+offset_bottom = 740.0
+theme_override_fonts/font = ExtResource("3_bdlrk")
+theme_override_font_sizes/font_size = 20
+text = "PRESS ENTER TO CONTINUE..."
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ulu27")

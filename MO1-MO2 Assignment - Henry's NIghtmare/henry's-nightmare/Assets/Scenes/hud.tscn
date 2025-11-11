@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwgrr86ftp8i6"]
+
+[ext_resource type="Script" uid="uid://b0bk4gap512np" path="res://hud.gd" id="1_xs5ck"]
+[ext_resource type="Texture2D" uid="uid://cej07ypthx5j2" path="res://Assets/Sprites/Heart_icon.png" id="2_x7y1r"]
+[ext_resource type="Texture2D" uid="uid://661qv8q1bh5b" path="res://Assets/Sprites/Orb_icon.png" id="3_l5nkk"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_xs5ck")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -583.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HeartIcon" type="TextureRect" parent="MarginContainer/TopBar"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("2_x7y1r")
+stretch_mode = 2
+
+[node name="LivesLabel" type="Label" parent="MarginContainer/TopBar"]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OrbIcon" type="TextureRect" parent="MarginContainer/TopBar"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_l5nkk")
+stretch_mode = 2
+
+[node name="OrbsLabel" type="Label" parent="MarginContainer/TopBar"]
+layout_mode = 2

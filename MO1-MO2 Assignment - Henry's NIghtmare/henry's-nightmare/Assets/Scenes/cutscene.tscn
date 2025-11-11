@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cadkcl4p8rgdv"]
+
+[ext_resource type="Script" uid="uid://bt6ux4h5c7nj8" path="res://Assets/Scenes/cutscene.gd" id="1_ks5jh"]
+[ext_resource type="VideoStream" path="res://Assets/Sprites/Main_Menu_Animation.ogv" id="1_lgdvr"]
+[ext_resource type="FontFile" uid="uid://cfjciextshsi7" path="res://poco/Poco.ttf" id="2_ks5jh"]
+
+[node name="Cutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ks5jh")
+
+[node name="Video" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+stream = ExtResource("1_lgdvr")
+expand = true
+
+[node name="Skip" type="Label" parent="."]
+layout_mode = 0
+offset_left = 950.0
+offset_top = 670.0
+offset_right = 1273.0
+offset_bottom = 713.0
+theme_override_fonts/font = ExtResource("2_ks5jh")
+theme_override_font_sizes/font_size = 35
+text = "PRESS ENTER TO SKIP"
